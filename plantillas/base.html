@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html lang="es"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="Idea" content="Login">
+    </head>
+    <body>
+   <div>
+       <img src="{{MEDIA_URL}}img/libros1.jpg" align="left"><p id="title">TITULO IDEA</p>
+   </div>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Registro</a></li>
+   </div>
+
+  {% block content %}
+  {% endblock %}
+<footer>
+    <img  src="{{MEDIA_URL}}img/im1.jpg" ALIGN=MIDDLE> 
+    <p><strong>Contacto</strong><br>0412-9939310<br></p>
+    <div >
+      <img  src="{{MEDIA_URL}}img/im4.jpg" ALIGN=top>
+      <p >Todos los derechos reservados</p>
+    </div>
+  </footer>
+   {% block js %}
+   {% endblock %}
+</body>
+</html>

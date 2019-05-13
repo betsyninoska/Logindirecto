@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
+{% block content %}
+<div>
+  <div>
+    <br><br>
+      <h4  align="center">IDEA LA GLORIA SEA PARA CRISTO</h4>
+    <br><br>
+  </div>
+  
+  {% if user.is_authenticated %}
+    Bienvenido {{user.username|capfirst}}
+    <a href="/cerrar/">Salir</a>
+  {% else %}
+  <form  method="POST">{% csrf_token %}
+    <div >
+      <label  for="inputEmail" >Usuario</label>
+      <div>
+        <input name="username" type="text" id="inputEmail" placeholder="Usuario">
+      </div>
+    </div>
+    <div>
+      <label  for="inputPassword">Contraseña</label>
+      <div>
+        <input name="password" type="password" id="inputPassword" placeholder="Contraseña">
+      </div>
+    </div>
+    <div>
+     </div> 
+        <div>
+          <label class="checkbox">
+          <input type="checkbox">Recordar</label>
+          <button type="submit" class="btn btn-info">Ingresar</button>
+        </div>
+    </div>
+    <div>
+        <a href="/registrarse/" class="reg">Registrarse</a>
+    </div>
+  </form>
+  {% endif %}  
+
+<div>
+
+<div>
+    <hr>
+      <div>
+        <h3><font color="#151515"><strong>IDEA 2019</strong></font></h3>
+      </div>
+      <div>
+        <h4><font color="#151515"><strong>Para una IDEA</strong></font></h4>
+      </div>
+    <hr>
+</div>  	
+
+
+{% endblock %}
